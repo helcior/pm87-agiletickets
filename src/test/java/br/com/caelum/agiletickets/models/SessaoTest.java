@@ -38,4 +38,11 @@ public class SessaoTest {
 		Assert.assertEquals(2, sessao.getIngressosDisponiveis().intValue());
 	}
 	
+	@Test 
+	public void deve_vender_se_numero_de_ingresso_for_igual_quantidade_escolhida() throws Exception {
+		Sessao sessao = new Sessao();
+		sessao.setTotalIngressos(2);
+
+		Assert.assertTrue(sessao.podeReservar(2));
+	}
 }
